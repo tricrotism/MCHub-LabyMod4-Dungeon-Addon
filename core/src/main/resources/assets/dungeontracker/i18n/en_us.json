@@ -1,0 +1,17 @@
+{
+  "dungeontracker": {
+    "settings": {
+      "name": "DungeonTracker",
+      "enabled": {
+        "name": "Enabled"
+      },
+      "webhook": {
+        "name": "Discord Webhook"
+      },
+      "webhookImageURL": {
+        "name": "Discord Image URL",
+        "placeholder": "https://cdn.discordapp.com/avatars/256116115422314496/1a69f18e8e9405ed31f26b637df752b4.png"
+      }
+    }
+  }
+}
