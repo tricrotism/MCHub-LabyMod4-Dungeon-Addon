@@ -39,6 +39,9 @@ public class DungeonChatMessageListener {
     if (event.chatMessage().getPlainText()
         .contains("A new dungeon has opened! You can join the dungeon by typing /dungeon!")
         || event.chatMessage().getPlainText().contains("A dungeon is currently open!")) {
+      if (!this.addon.configuration().showDungeonStartMessage().get()) {
+        return;
+      }
       webhook.addEmbed(new DiscordWebhook.EmbedObject()
           .setTitle("Dungeon")
           .setDescription("A new dungeon has opened on MCHub!")
@@ -50,6 +53,9 @@ public class DungeonChatMessageListener {
       }
       this.addon.logger().info("[DUNGEON] Dungeon is open");
     } else if (event.chatMessage().getPlainText().contains("The dungeon boss has spawned!")) {
+      if (!this.addon.configuration().showDungeonBossSpawnMessage().get()) {
+        return;
+      }
       webhook.addEmbed(new DiscordWebhook.EmbedObject()
           .setTitle("Dungeon")
           .setDescription("A new boss has spawned in the dungeon!")
@@ -61,6 +67,9 @@ public class DungeonChatMessageListener {
       }
       this.addon.logger().info("[DUNGEON] Boss spawned");
     } else if (event.chatMessage().getPlainText().contains("The dungeon will be closing in ")) {
+      if (!this.addon.configuration().showDungeonClosingInMessage().get()) {
+        return;
+      }
       webhook.addEmbed(new DiscordWebhook.EmbedObject()
           .setTitle("Dungeon")
           .setDescription("The dungeon is closing SOON hurry on!")
@@ -72,6 +81,9 @@ public class DungeonChatMessageListener {
       }
       this.addon.logger().info("[DUNGEON] Dungeon is closing soon");
     } else if (event.chatMessage().getPlainText().contains("The dungeon boss has been slain!")) {
+      if (!this.addon.configuration().showDungeonBossSlainMessage().get()) {
+        return;
+      }
       webhook.addEmbed(new DiscordWebhook.EmbedObject()
           .setTitle("Dungeon")
           .setDescription("The dungeon boss has been slain!")
