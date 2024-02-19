@@ -1,10 +1,7 @@
 package com.tricrotism.mchub.listener;
 
 import com.tricrotism.mchub.MCHubDungeonTracker;
-import net.labymod.api.client.chat.ChatMessage;
-import net.labymod.api.client.chat.ChatTrustLevel;
-import net.labymod.api.client.component.Component;
-import net.labymod.api.client.options.ChatVisibility;
+import com.tricrotism.mchub.util.MessageUtil;
 import net.labymod.api.event.Subscribe;
 import net.labymod.api.event.client.network.server.ServerJoinEvent;
 
@@ -21,9 +18,8 @@ public class PlayerJoinServerListener {
     if (addon.configuration().enabled().get() && addon.configuration().webhook().get().isEmpty()) {
       System.out.println(event.serverData().address());
       if (event.serverData().address().getAddress().getHostString().contains("mchub.com")) {
-        addon.labyAPI().chatProvider().chatController().addMessage(ChatMessage.builder().component(
-            Component.translatable("§cMCHub Dungeon Tracker: §7Webhook URL is not set!")
-        ).visibility(ChatVisibility.SHOWN).trustLevel(ChatTrustLevel.SYSTEM).build());
+        MessageUtil messageUtil = new MessageUtil(addon);
+        messageUtil.sendChatMessage("§cMCHub Dungeon Tracker: §7Webhook URL is not set!");
       }
     }
   }

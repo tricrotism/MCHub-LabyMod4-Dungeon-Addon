@@ -3,25 +3,48 @@
     "settings": {
       "name": "DungeonTracker",
       "enabled": {
-        "name": "Enabled"
+        "name": "Enabled",
+        "description": "Enable or disable the DungeonTracker"
       },
       "webhook": {
-        "name": "Discord Webhook"
+        "name": "Discord Webhook",
+        "description": "The Discord Webhook URL to send messages to"
       },
       "webhookImageURL": {
-        "name": "Discord Image URL"
+        "name": "Discord Image URL",
+        "description": "The URL of the image to send with the Discord Webhook"
       },
-      "showDungeonStartMessage": {
-        "name": "Show Dungeon Started Message"
+      "showDungeonStartMessageToggle": {
+        "name": "Show Dungeon Started Message",
+        "description": "Sends an embed to discord when a dungeon starts"
       },
-      "showDungeonBossSpawnMessage": {
-        "name": "Show Dungeon Boss Spawn Message"
+      "showDungeonBossSpawnMessageToggle": {
+        "name": "Show Dungeon Boss Spawn Message",
+        "description": "Sends an embed to discord when a dungeon boss spawns"
       },
-      "showDungeonClosingInMessage": {
-        "name": "Show Dungeon Closing In Message"
+      "showDungeonClosingInMessageToggle": {
+        "name": "Show Dungeon Closing In Message",
+        "description": "Sends an embed to discord when a dungeon is closing in"
       },
-      "showDungeonBossSlainMessage": {
-        "name": "Show Dungeon Boss Slain Message"
+      "showDungeonBossSlainMessageToggle": {
+        "name": "Show Dungeon Boss Slain Message",
+        "description": "Sends an embed to discord when a dungeon boss is slain"
+      },
+      "getDungeonStartMessage": {
+        "name": "Dungeon Started Message",
+        "description": "The message that gets sent to the client when a dungeon starts\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+      },
+      "getDungeonBossSpawnMessage": {
+        "name": "Dungeon Boss Spawn Message",
+        "description": "The message that gets sent to the client when a dungeon boss spawns\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+      },
+      "getDungeonClosingInMessage": {
+        "name": "Dungeon Closing In Message",
+        "description": "The message that gets sent to the client when a dungeon is closing in\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+      },
+      "getDungeonBossSlainMessage": {
+        "name": "Dungeon Boss Slain Message",
+        "description": "The message that gets sent to the client when a dungeon boss is slain\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
       }
     }
   }

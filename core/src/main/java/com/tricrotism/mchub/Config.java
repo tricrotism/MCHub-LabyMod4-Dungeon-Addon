@@ -4,9 +4,7 @@ import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.TextFieldWidget.TextFieldSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
-import net.labymod.api.configuration.loader.annotation.SpriteSlot;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
-import net.labymod.api.configuration.settings.annotation.SettingSection;
 
 @ConfigName("settings")
 public class Config extends AddonConfig {
@@ -34,30 +32,58 @@ public class Config extends AddonConfig {
   }
 
   @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonStartMessage = new ConfigProperty<>(true);
+  private final ConfigProperty<Boolean> showDungeonStartMessageToggle = new ConfigProperty<>(true);
 
-  public ConfigProperty<Boolean> showDungeonStartMessage() {
-    return this.showDungeonStartMessage;
+  public ConfigProperty<Boolean> showDungeonStartMessageToggle() {
+    return this.showDungeonStartMessageToggle;
   }
 
   @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonBossSpawnMessage = new ConfigProperty<>(true);
+  private final ConfigProperty<Boolean> showDungeonBossSpawnMessageToggle = new ConfigProperty<>(true);
 
-  public ConfigProperty<Boolean> showDungeonBossSpawnMessage() {
-    return this.showDungeonBossSpawnMessage;
+  public ConfigProperty<Boolean> showDungeonBossSpawnMessageToggle() {
+    return this.showDungeonBossSpawnMessageToggle;
   }
 
   @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonClosingInMessage = new ConfigProperty<>(true);
+  private final ConfigProperty<Boolean> showDungeonClosingInMessageToggle = new ConfigProperty<>(true);
 
-  public ConfigProperty<Boolean> showDungeonClosingInMessage() {
-    return this.showDungeonClosingInMessage;
+  public ConfigProperty<Boolean> showDungeonClosingInMessageToggle() {
+    return this.showDungeonClosingInMessageToggle;
   }
 
   @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonBossSlainMessage = new ConfigProperty<>(true);
+  private final ConfigProperty<Boolean> showDungeonBossSlainMessageToggle = new ConfigProperty<>(true);
 
-  public ConfigProperty<Boolean> showDungeonBossSlainMessage() {
-    return this.showDungeonBossSlainMessage;
+  public ConfigProperty<Boolean> showDungeonBossSlainMessageToggle() {
+    return this.showDungeonBossSlainMessageToggle;
+  }
+
+  @TextFieldSetting
+  private final ConfigProperty<String> getDungeonStartMessage = new ConfigProperty<>("");
+
+  public ConfigProperty<String> getDungeonStartMessage() {
+    return this.getDungeonStartMessage;
+  }
+
+  @TextFieldSetting
+  private final ConfigProperty<String> getDungeonBossSpawnMessage = new ConfigProperty<>("");
+
+  public ConfigProperty<String> getDungeonBossSpawnMessage() {
+    return this.getDungeonBossSpawnMessage;
+  }
+
+  @TextFieldSetting
+  private final ConfigProperty<String> getDungeonClosingInMessage = new ConfigProperty<>("");
+
+  public ConfigProperty<String> getDungeonClosingInMessage() {
+    return this.getDungeonClosingInMessage;
+  }
+
+  @TextFieldSetting
+  private final ConfigProperty<String> getDungeonBossSlainMessage = new ConfigProperty<>("");
+
+  public ConfigProperty<String> getDungeonBossSlainMessage() {
+    return this.getDungeonBossSlainMessage;
   }
 }
