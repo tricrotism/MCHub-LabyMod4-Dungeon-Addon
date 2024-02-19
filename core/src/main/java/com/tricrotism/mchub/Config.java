@@ -9,7 +9,7 @@ import net.labymod.api.configuration.loader.property.ConfigProperty;
 import java.util.List;
 
 
-
+//test
 @ConfigName("settings")
 public class Config extends AddonConfig {
 
