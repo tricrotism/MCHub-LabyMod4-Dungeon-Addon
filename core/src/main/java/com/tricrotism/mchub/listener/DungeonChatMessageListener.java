@@ -97,7 +97,7 @@ public class DungeonChatMessageListener {
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription("The dungeon is closing SOON hurry on!")
+            .setDescription("The dungeon is closing in " + event.chatMessage().getPlainText().split("The dungeon will be closing in ")[1].split(" ")[0] + " minutes!")
             .setColor(Color.RED));
         try {
           webhook.execute();
