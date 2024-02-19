@@ -37,9 +37,12 @@ public class DungeonChatMessageListener {
     }
     webhook.setUsername("MCHub Dungeons");
 
+    //Dungeon Start
+
     if (event.chatMessage().getPlainText()
         .contains("A new dungeon has opened! You can join the dungeon by typing /dungeon!")
         || event.chatMessage().getPlainText().contains("A dungeon is currently open!")) {
+
       if (!this.addon.configuration().showDungeonStartMessageToggle().get()) {
         return;
       }
@@ -47,8 +50,8 @@ public class DungeonChatMessageListener {
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription("A new dungeon has opened on MCHub!")
-            .setColor(Color.GREEN));
+            .setDescription(this.addon.configuration().dungeonStartWebhookMessage().get())
+            .setColor(Color.CYAN));
         try {
           webhook.execute();
         } catch (IOException e) {
@@ -59,6 +62,8 @@ public class DungeonChatMessageListener {
         if (this.addon.configuration().getDungeonStartMessage().get().isBlank()) {
           return;
         }
+
+        //Dungeon Boss Spawn
 
         MessageUtil messageUtil = new MessageUtil(addon);
         messageUtil.sendChatMessage(this.addon.configuration().getDungeonStartMessage().get().replaceAll("&", "§"));
@@ -72,7 +77,7 @@ public class DungeonChatMessageListener {
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription("A new boss has spawned in the dungeon!")
+            .setDescription(this.addon.configuration().getDungeonBossSpawnWebhookMessage().get())
             .setColor(Color.MAGENTA));
         try {
           webhook.execute();
@@ -84,6 +89,8 @@ public class DungeonChatMessageListener {
         if (this.addon.configuration().getDungeonBossSpawnMessage().get().isBlank()) {
           return;
         }
+
+        //Dungeon Closing
 
         MessageUtil messageUtil = new MessageUtil(addon);
         messageUtil.sendChatMessage(this.addon.configuration().getDungeonBossSpawnMessage().get().replaceAll("&", "§"));
@@ -110,6 +117,8 @@ public class DungeonChatMessageListener {
           return;
         }
 
+        //Dungeon Boss Killed
+
         MessageUtil messageUtil = new MessageUtil(addon);
         messageUtil.sendChatMessage(this.addon.configuration().getDungeonClosingInMessage().get().replaceAll("&", "§"));
       });
@@ -122,7 +131,7 @@ public class DungeonChatMessageListener {
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription("The dungeon boss has been slain!")
+            .setDescription(this.addon.configuration().getDungeonBossSlainWebhookMessage().get())
             .setColor(Color.ORANGE));
         try {
           webhook.execute();

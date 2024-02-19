@@ -18,17 +18,33 @@
         "name": "Show Dungeon Started Message",
         "description": "Sends an embed to discord when a dungeon starts"
       },
+      "dungeonStartWebhookMessage": {
+        "name": "Dungeon Start Webhook Message",
+        "description": "Sets the message sent through the webhook when dungeon starts"
+      },
       "showDungeonBossSpawnMessageToggle": {
         "name": "Show Dungeon Boss Spawn Message",
         "description": "Sends an embed to discord when a dungeon boss spawns"
+      },
+      "dungeonBossSpawnWebhookMessage": {
+        "name": "Boss Spawn Webhook Message",
+        "description": "Sets the message sent through the webhook when dungeon boss spawns"
       },
       "showDungeonClosingInMessageToggle": {
         "name": "Show Dungeon Closing In Message",
         "description": "Sends an embed to discord when a dungeon is closing in"
       },
+      "getDungeonClosingInMessage": {
+        "name": "Show Dungeon Closing Message",
+        "description": "The message that gets sent to the client when a dungeon is closing\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+      },
       "showDungeonBossSlainMessageToggle": {
         "name": "Show Dungeon Boss Slain Message",
         "description": "Sends an embed to discord when a dungeon boss is slain"
+      },
+      "dungeonBossSlainWebhookMessage": {
+        "name": "Boss Slain Webhook Message",
+        "description": "Sets the message sent through the webhook when dungeon dungeon boss is slain"
       },
       "getDungeonStartMessage": {
         "name": "Dungeon Started Message",
@@ -37,10 +53,6 @@
       "getDungeonBossSpawnMessage": {
         "name": "Dungeon Boss Spawn Message",
         "description": "The message that gets sent to the client when a dungeon boss spawns\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
-      },
-      "getDungeonClosingInMessage": {
-        "name": "Dungeon Closing In Message",
-        "description": "The message that gets sent to the client when a dungeon is closing in\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
       },
       "getDungeonBossSlainMessage": {
         "name": "Dungeon Boss Slain Message",
