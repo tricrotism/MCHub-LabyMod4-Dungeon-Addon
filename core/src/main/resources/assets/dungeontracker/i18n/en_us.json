@@ -8,7 +8,7 @@
       },
       "webhook": {
         "name": "Discord Webhook",
-        "description": "The Discord Webhook URL to send messages to"
+        "description": "The Discord Webhook URL to send messages to\n\nHow To: \nServer Settings > Integrations > Webhooks > New Webhook"
       },
       "webhookImageURL": {
         "name": "Discord Image URL",
