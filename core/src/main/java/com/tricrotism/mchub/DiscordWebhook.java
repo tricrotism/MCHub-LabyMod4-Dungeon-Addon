@@ -148,11 +148,13 @@ public class DiscordWebhook {
     stream.flush();
     stream.close();
 
-    connection.getInputStream().close(); //I'm not sure why but it doesn't work without getting the InputStream
+    connection.getInputStream()
+        .close(); //I'm not sure why but it doesn't work without getting the InputStream
     connection.disconnect();
   }
 
   public static class EmbedObject {
+
     private String title;
     private String description;
     private String url;
@@ -246,6 +248,7 @@ public class DiscordWebhook {
     }
 
     private class Footer {
+
       private String text;
       private String iconUrl;
 
@@ -264,6 +267,7 @@ public class DiscordWebhook {
     }
 
     private class Thumbnail {
+
       private String url;
 
       private Thumbnail(String url) {
@@ -276,6 +280,7 @@ public class DiscordWebhook {
     }
 
     private class Image {
+
       private String url;
 
       private Image(String url) {
@@ -288,6 +293,7 @@ public class DiscordWebhook {
     }
 
     private class Author {
+
       private String name;
       private String url;
       private String iconUrl;
@@ -312,6 +318,7 @@ public class DiscordWebhook {
     }
 
     private class Field {
+
       private String name;
       private String value;
       private boolean inline;

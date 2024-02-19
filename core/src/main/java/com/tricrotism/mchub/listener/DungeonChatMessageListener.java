@@ -22,7 +22,7 @@ public class DungeonChatMessageListener {
       return;
     }
 
-    if (this.addon.configuration().webhook().get() == null) {
+    if (this.addon.configuration().webhook().get().isBlank()) {
       return;
     }
 
