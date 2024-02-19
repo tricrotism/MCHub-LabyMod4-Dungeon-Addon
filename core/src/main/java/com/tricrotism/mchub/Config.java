@@ -7,7 +7,7 @@ import net.labymod.api.configuration.loader.annotation.ConfigName;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
 
 
-//Testing
+//
 @ConfigName("settings")
 public class Config extends AddonConfig {
 
