@@ -57,6 +57,23 @@
       "getDungeonBossSlainMessage": {
         "name": "Dungeon Boss Slain Message",
         "description": "The message that gets sent to the client when a dungeon boss is slain\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+      },
+      "header": {
+        "mainSection": {
+          "name": "Main Settings"
+        },
+        "dungeonStartSection": {
+          "name": "Dungeon Starting Settings"
+        },
+        "bossSpawnSection": {
+          "name": "Boss Spawn Settings"
+        },
+        "dungeonClosingSection": {
+          "name": "Dungeon Closing Settings"
+        },
+        "bossSlainSection": {
+          "name": "Boss Slain Settings"
+        }
       }
     }
   }

@@ -5,12 +5,14 @@ import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.Switc
 import net.labymod.api.client.gui.screen.widget.widgets.input.TextFieldWidget.TextFieldSetting;
 import net.labymod.api.configuration.loader.annotation.ConfigName;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
+import net.labymod.api.configuration.settings.annotation.SettingSection;
 
 
 //
 @ConfigName("settings")
 public class Config extends AddonConfig {
 
+  @SettingSection("mainSection")
   @SwitchSetting
   private final ConfigProperty<Boolean> enabled = new ConfigProperty<>(true);
 
@@ -35,7 +37,7 @@ public class Config extends AddonConfig {
 
 
 
-
+  @SettingSection("dungeonStartSection")
   @SwitchSetting
   private final ConfigProperty<Boolean> showDungeonStartMessageToggle = new ConfigProperty<>(true);
 
@@ -60,7 +62,7 @@ public class Config extends AddonConfig {
 
 
 
-
+  @SettingSection("bossSpawnSection")
   @SwitchSetting
   private final ConfigProperty<Boolean> showDungeonBossSpawnMessageToggle = new ConfigProperty<>(true);
 
@@ -84,7 +86,7 @@ public class Config extends AddonConfig {
 
 
 
-
+  @SettingSection("dungeonClosingSection")
   @SwitchSetting
   private final ConfigProperty<Boolean> showDungeonClosingInMessageToggle = new ConfigProperty<>(true);
 
@@ -101,7 +103,7 @@ public class Config extends AddonConfig {
 
 
 
-
+  @SettingSection("bossSlainSection")
   @SwitchSetting
   private final ConfigProperty<Boolean> showDungeonBossSlainMessageToggle = new ConfigProperty<>(true);
 
