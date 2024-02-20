@@ -8,7 +8,6 @@ import net.labymod.api.configuration.loader.property.ConfigProperty;
 import net.labymod.api.configuration.settings.annotation.SettingSection;
 
 
-//
 @ConfigName("settings")
 public class Config extends AddonConfig {
 
