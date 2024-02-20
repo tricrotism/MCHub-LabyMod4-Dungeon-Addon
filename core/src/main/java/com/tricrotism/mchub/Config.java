@@ -34,101 +34,28 @@ public class Config extends AddonConfig {
     return this.webhookImageURL;
   }
 
+  @SettingSection("messageSettings")
+  private DungeonStartConfig dungeonStartConfig = new DungeonStartConfig();
 
-
-  @SettingSection("dungeonStartSection")
-  @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonStartMessageToggle = new ConfigProperty<>(true);
-
-  public ConfigProperty<Boolean> showDungeonStartMessageToggle() {
-    return this.showDungeonStartMessageToggle;
+  public DungeonStartConfig getDungeonStartConfig(){
+    return this.dungeonStartConfig;
   }
 
-  @TextFieldSetting
-  private final ConfigProperty<String> getDungeonStartMessage = new ConfigProperty<>("");
+  private DungeonClosingConfig dungeonClosingConfig = new DungeonClosingConfig();
 
-  public ConfigProperty<String> getDungeonStartMessage() {
-    return this.getDungeonStartMessage;
+  public  DungeonClosingConfig getDungeonClosingConfig(){
+    return this.dungeonClosingConfig;
   }
 
-  @TextFieldSetting
-  private final ConfigProperty<String> dungeonStartWebhookMessage = new ConfigProperty<>("A new dungeon has opened on MCHub!");
+  private BossSpawnConfig bossSpawnConfig = new BossSpawnConfig();
 
-  public ConfigProperty<String> dungeonStartWebhookMessage(){
-    return this.dungeonStartWebhookMessage;
+  public BossSpawnConfig getBossSpawnConfig() {
+    return bossSpawnConfig;
   }
 
+  private BossSlainConfig bossSlainConfig = new BossSlainConfig();
 
-
-
-  @SettingSection("bossSpawnSection")
-  @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonBossSpawnMessageToggle = new ConfigProperty<>(true);
-
-  public ConfigProperty<Boolean> showDungeonBossSpawnMessageToggle() {
-    return this.showDungeonBossSpawnMessageToggle;
+  public BossSlainConfig getBossSlainConfig() {
+    return bossSlainConfig;
   }
-
-  @TextFieldSetting
-  private final ConfigProperty<String> getDungeonBossSpawnMessage = new ConfigProperty<>("");
-
-  public ConfigProperty<String> getDungeonBossSpawnMessage() {
-    return this.getDungeonBossSpawnMessage;
-  }
-
-  @TextFieldSetting
-  private final ConfigProperty<String> dungeonBossSpawnWebhookMessage = new ConfigProperty<>("A new boss has spawned in the dungeon!");
-
-  public ConfigProperty<String> getDungeonBossSpawnWebhookMessage(){
-    return this.dungeonBossSpawnWebhookMessage;
-  }
-
-
-
-  @SettingSection("dungeonClosingSection")
-  @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonClosingInMessageToggle = new ConfigProperty<>(true);
-
-  public ConfigProperty<Boolean> showDungeonClosingInMessageToggle() {
-    return this.showDungeonClosingInMessageToggle;
-  }
-
-  @TextFieldSetting
-  private final ConfigProperty<String> getDungeonClosingInMessage = new ConfigProperty<>("");
-
-  public ConfigProperty<String> getDungeonClosingInMessage() {
-    return this.getDungeonClosingInMessage;
-  }
-
-
-
-  @SettingSection("bossSlainSection")
-  @SwitchSetting
-  private final ConfigProperty<Boolean> showDungeonBossSlainMessageToggle = new ConfigProperty<>(true);
-
-  public ConfigProperty<Boolean> showDungeonBossSlainMessageToggle() {
-    return this.showDungeonBossSlainMessageToggle;
-  }
-
-  @TextFieldSetting
-  private final ConfigProperty<String> getDungeonBossSlainMessage = new ConfigProperty<>("");
-
-  public ConfigProperty<String> getDungeonBossSlainMessage() {
-    return this.getDungeonBossSlainMessage;
-  }
-
-  @TextFieldSetting
-  private final ConfigProperty<String> dungeonBossSlainWebhookMessage = new ConfigProperty<>("The dungeon boss has been slain!");
-
-  public ConfigProperty<String> getDungeonBossSlainWebhookMessage(){
-    return this.dungeonBossSlainWebhookMessage;
-  }
-
-
-
-
-
-
-
-
 }

@@ -43,14 +43,15 @@ public class DungeonChatMessageListener {
         .contains("A new dungeon has opened! You can join the dungeon by typing /dungeon!")
         || event.chatMessage().getPlainText().contains("A dungeon is currently open!")) {
 
-      if (!this.addon.configuration().showDungeonStartMessageToggle().get()) {
-        return;
-      }
+//
+        if (!this.addon.configuration().getDungeonStartConfig().showDungeonStartMessageToggle().get()) {
+          return;
+        }
 
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription(this.addon.configuration().dungeonStartWebhookMessage().get())
+            .setDescription(this.addon.configuration().getDungeonStartConfig().dungeonStartWebhookMessage().get())
             .setColor(Color.CYAN));
         try {
           webhook.execute();
@@ -59,25 +60,25 @@ public class DungeonChatMessageListener {
         }
         this.addon.logger().info("[DUNGEON] Dungeon is open");
 
-        if (this.addon.configuration().getDungeonStartMessage().get().isBlank()) {
+        if (this.addon.configuration().getDungeonStartConfig().getDungeonStartMessage().get().isBlank()) {
           return;
         }
 
         //Dungeon Boss Spawn
 
         MessageUtil messageUtil = new MessageUtil(addon);
-        messageUtil.sendChatMessage(this.addon.configuration().getDungeonStartMessage().get().replaceAll("&", "§"));
+        messageUtil.sendChatMessage(this.addon.configuration().getDungeonStartConfig().getDungeonStartMessage().get().replaceAll("&", "§"));
       });
       thread.start();
     } else if (event.chatMessage().getPlainText().contains("The dungeon boss has spawned!")) {
-      if (!this.addon.configuration().showDungeonBossSpawnMessageToggle().get()) {
+      if (!this.addon.configuration().getBossSpawnConfig().showDungeonBossSpawnMessageToggle().get()) {
         return;
       }
 
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription(this.addon.configuration().getDungeonBossSpawnWebhookMessage().get())
+            .setDescription(this.addon.configuration().getBossSpawnConfig().getDungeonBossSpawnWebhookMessage().get())
             .setColor(Color.MAGENTA));
         try {
           webhook.execute();
@@ -86,18 +87,18 @@ public class DungeonChatMessageListener {
         }
         this.addon.logger().info("[DUNGEON] Boss spawned");
 
-        if (this.addon.configuration().getDungeonBossSpawnMessage().get().isBlank()) {
+        if (this.addon.configuration().getBossSpawnConfig().getDungeonBossSpawnMessage().get().isBlank()) {
           return;
         }
 
         //Dungeon Closing
 
         MessageUtil messageUtil = new MessageUtil(addon);
-        messageUtil.sendChatMessage(this.addon.configuration().getDungeonBossSpawnMessage().get().replaceAll("&", "§"));
+        messageUtil.sendChatMessage(this.addon.configuration().getBossSpawnConfig().getDungeonBossSpawnMessage().get().replaceAll("&", "§"));
       });
       thread.start();
     } else if (event.chatMessage().getPlainText().contains("The dungeon will be closing in ")) {
-      if (!this.addon.configuration().showDungeonClosingInMessageToggle().get()) {
+      if (!this.addon.configuration().getDungeonClosingConfig().showDungeonClosingInMessageToggle().get()) {
         return;
       }
 
@@ -113,25 +114,25 @@ public class DungeonChatMessageListener {
         }
         this.addon.logger().info("[DUNGEON] Dungeon is closing soon");
 
-        if (this.addon.configuration().getDungeonClosingInMessage().get().isBlank()) {
+        if (this.addon.configuration().getDungeonClosingConfig().getDungeonClosingInMessage().get().isBlank()) {
           return;
         }
 
         //Dungeon Boss Killed
 
         MessageUtil messageUtil = new MessageUtil(addon);
-        messageUtil.sendChatMessage(this.addon.configuration().getDungeonClosingInMessage().get().replaceAll("&", "§"));
+        messageUtil.sendChatMessage(this.addon.configuration().getDungeonClosingConfig().getDungeonClosingInMessage().get().replaceAll("&", "§"));
       });
       thread.start();
     } else if (event.chatMessage().getPlainText().contains("The dungeon boss has been slain!")) {
-      if (!this.addon.configuration().showDungeonBossSlainMessageToggle().get()) {
+      if (!this.addon.configuration().getBossSlainConfig().showDungeonBossSlainMessageToggle().get()) {
         return;
       }
 
       Thread thread = new Thread(() -> {
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
-            .setDescription(this.addon.configuration().getDungeonBossSlainWebhookMessage().get())
+            .setDescription(this.addon.configuration().getBossSlainConfig().getDungeonBossSlainWebhookMessage().get())
             .setColor(Color.ORANGE));
         try {
           webhook.execute();
@@ -140,11 +141,11 @@ public class DungeonChatMessageListener {
         }
         this.addon.logger().info("[DUNGEON] Boss slain");
 
-        if (this.addon.configuration().getDungeonBossSlainMessage().get().isBlank()) {
+        if (this.addon.configuration().getBossSlainConfig().getDungeonBossSlainMessage().get().isBlank()) {
           return;
         }
         MessageUtil messageUtil = new MessageUtil(addon);
-        messageUtil.sendChatMessage(this.addon.configuration().getDungeonBossSlainMessage().get().replaceAll("&", "§"));
+        messageUtil.sendChatMessage(this.addon.configuration().getBossSlainConfig().getDungeonBossSlainMessage().get().replaceAll("&", "§"));
       });
       thread.start();
     } else {
