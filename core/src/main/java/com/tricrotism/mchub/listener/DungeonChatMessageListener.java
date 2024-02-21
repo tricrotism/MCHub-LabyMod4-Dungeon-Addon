@@ -49,6 +49,7 @@ public class DungeonChatMessageListener {
         }
 
       Thread thread = new Thread(() -> {
+        webhook.setContent(this.addon.configuration().getDungeonStartConfig().getDungeonStartWebhookCustomContent().get());
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
             .setDescription(this.addon.configuration().getDungeonStartConfig().dungeonStartWebhookMessage().get())
@@ -76,6 +77,7 @@ public class DungeonChatMessageListener {
       }
 
       Thread thread = new Thread(() -> {
+        webhook.setContent(this.addon.configuration().getBossSpawnConfig().getDungeonBossSpawnWebhookCustomContent().get());
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
             .setDescription(this.addon.configuration().getBossSpawnConfig().getDungeonBossSpawnWebhookMessage().get())
@@ -103,6 +105,7 @@ public class DungeonChatMessageListener {
       }
 
       Thread thread = new Thread(() -> {
+        webhook.setContent(this.addon.configuration().getDungeonClosingConfig().getDungeonClosingWebhookCustomContent().get());
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
             .setDescription("The dungeon is closing in " + event.chatMessage().getPlainText().split("The dungeon will be closing in ")[1].split(" ")[0] + " minutes!")
@@ -130,6 +133,7 @@ public class DungeonChatMessageListener {
       }
 
       Thread thread = new Thread(() -> {
+        webhook.setContent(this.addon.configuration().getBossSlainConfig().getDungeonBossSlainWebhookCustomContent().get());
         webhook.addEmbed(new DiscordWebhook.EmbedObject()
             .setTitle("Dungeon")
             .setDescription(this.addon.configuration().getBossSlainConfig().getDungeonBossSlainWebhookMessage().get())

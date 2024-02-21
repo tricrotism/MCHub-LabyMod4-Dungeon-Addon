@@ -1,12 +1,13 @@
 package com.tricrotism.mchub;
 
+import com.tricrotism.mchub.config.MainConfig;
 import com.tricrotism.mchub.listener.DungeonChatMessageListener;
 import com.tricrotism.mchub.listener.PlayerJoinServerListener;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
 @AddonMain
-public class MCHubDungeonTracker extends LabyAddon<Config> {
+public class MCHubDungeonTracker extends LabyAddon<MainConfig> {
 
   @Override
   protected void enable() {
@@ -19,8 +20,8 @@ public class MCHubDungeonTracker extends LabyAddon<Config> {
   }
 
   @Override
-  protected Class<Config> configurationClass() {
-    return Config.class;
+  protected Class<MainConfig> configurationClass() {
+    return MainConfig.class;
   }
 
 }

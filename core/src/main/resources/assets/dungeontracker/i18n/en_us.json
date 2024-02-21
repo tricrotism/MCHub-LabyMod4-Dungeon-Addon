@@ -35,6 +35,10 @@
         "getDungeonStartMessage": {
           "name": "Dungeon Started Message",
           "description": "The message that gets sent to the client when a dungeon starts\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+        },
+        "dungeonStartWebhookCustomContent": {
+          "name": "Webhook Content",
+          "description": "Used to set the message before the embed\n\n§7To ping a user put <@{UserID}>\nTo ping a role put <@&{RoleID}>"
         }
       },
       "dungeonClosingConfig": {
@@ -46,6 +50,10 @@
         "getDungeonClosingInMessage": {
           "name": "Show Dungeon Closing Message",
           "description": "The message that gets sent to the client when a dungeon is closing\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+        },
+        "dungeonClosingWebhookCustomContent": {
+          "name": "Webhook Content",
+          "description": "Used to set the message before the embed\n\n§7To ping a user put <@{UserID}>\nTo ping a role put <@&{RoleID}>"
         }
       },
       "bossSpawnConfig": {
@@ -61,6 +69,10 @@
         "getDungeonBossSpawnMessage": {
           "name": "Dungeon Boss Spawn Message",
           "description": "The message that gets sent to the client when a dungeon boss spawns\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+        },
+        "dungeonBossSpawnWebhookCustomContent": {
+          "name": "Webhook Content",
+          "description": "Used to set the message before the embed\n\n§7To ping a user put <@{UserID}>\nTo ping a role put <@&{RoleID}>"
         }
       },
       "bossSlainConfig": {
@@ -76,6 +88,10 @@
         "getDungeonBossSlainMessage": {
           "name": "Dungeon Boss Slain Message",
           "description": "The message that gets sent to the client when a dungeon boss is slain\n\n*NOTE: YOU NEED TO USE '&' COLOR CODES*"
+        },
+        "dungeonBossSlainWebhookCustomContent": {
+          "name": "Webhook Content",
+          "description": "Used to set the message before the embed\n\n§7To ping a user put <@{UserID}>\nTo ping a role put <@&{RoleID}>"
         }
       }
     }

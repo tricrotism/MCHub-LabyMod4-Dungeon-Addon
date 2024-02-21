@@ -1,5 +1,9 @@
-package com.tricrotism.mchub;
+package com.tricrotism.mchub.config;
 
+import com.tricrotism.mchub.config.BossSlainConfig;
+import com.tricrotism.mchub.config.BossSpawnConfig;
+import com.tricrotism.mchub.config.DungeonClosingConfig;
+import com.tricrotism.mchub.config.DungeonStartConfig;
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.TextFieldWidget.TextFieldSetting;
@@ -9,7 +13,7 @@ import net.labymod.api.configuration.settings.annotation.SettingSection;
 
 
 @ConfigName("settings")
-public class Config extends AddonConfig {
+public class MainConfig extends AddonConfig {
 
   @SettingSection("mainSection")
   @SwitchSetting
@@ -37,13 +41,13 @@ public class Config extends AddonConfig {
   @SettingSection("messageSettings")
   private DungeonStartConfig dungeonStartConfig = new DungeonStartConfig();
 
-  public DungeonStartConfig getDungeonStartConfig(){
+  public DungeonStartConfig getDungeonStartConfig() {
     return this.dungeonStartConfig;
   }
 
   private DungeonClosingConfig dungeonClosingConfig = new DungeonClosingConfig();
 
-  public  DungeonClosingConfig getDungeonClosingConfig(){
+  public DungeonClosingConfig getDungeonClosingConfig() {
     return this.dungeonClosingConfig;
   }
 
