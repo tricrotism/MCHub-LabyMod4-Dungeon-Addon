@@ -8,8 +8,6 @@ import net.labymod.api.configuration.loader.property.ConfigProperty;
 public class DungeonClosingConfig extends net.labymod.api.configuration.loader.Config{
   @ParentSwitch
   @SwitchSetting
-  private ConfigProperty<Boolean> Enabled = new ConfigProperty<>(true);
-  @SwitchSetting
   private final ConfigProperty<Boolean> showDungeonClosingInMessageToggle = new ConfigProperty<>(true);
 
   public ConfigProperty<Boolean> showDungeonClosingInMessageToggle() {
