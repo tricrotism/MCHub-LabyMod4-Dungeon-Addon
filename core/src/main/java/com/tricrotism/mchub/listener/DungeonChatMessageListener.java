@@ -40,8 +40,7 @@ public class DungeonChatMessageListener {
     //Dungeon Start
 
     if (event.chatMessage().getPlainText()
-        .contains("A new dungeon has opened! You can join the dungeon by typing /dungeon!")
-        || event.chatMessage().getPlainText().contains("A dungeon is currently open!")) {
+        .contains("A new dungeon has opened! You can join the dungeon by typing /dungeon!")) {
 
 //
         if (!this.addon.configuration().getDungeonStartConfig().showDungeonStartMessageToggle().get()) {
