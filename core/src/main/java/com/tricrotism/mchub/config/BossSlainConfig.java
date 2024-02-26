@@ -6,8 +6,6 @@ import net.labymod.api.configuration.loader.Config;
 import net.labymod.api.configuration.loader.annotation.ParentSwitch;
 import net.labymod.api.configuration.loader.property.ConfigProperty;
 
-
-//Testing
 public class BossSlainConfig extends Config {
   @ParentSwitch
   @SwitchSetting
