@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.tricrotism.mchub"
-version = "1.0.0"
+version = "1.0.1"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
@@ -17,7 +17,7 @@ labyMod {
         author = "tricrotism"
         description = "MCHub Dungeon Tracker"
         minecraftVersion = "*"
-        version = System.getenv().getOrDefault("VERSION", "1.0.0")
+        version = System.getenv().getOrDefault("VERSION", "1.0.1")
     }
 
     minecraft {

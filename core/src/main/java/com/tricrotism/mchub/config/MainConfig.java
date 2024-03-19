@@ -39,25 +39,25 @@ public class MainConfig extends AddonConfig {
   }
 
   @SettingSection("messageSettings")
-  private DungeonStartConfig dungeonStartConfig = new DungeonStartConfig();
+  private final DungeonStartConfig dungeonStartConfig = new DungeonStartConfig();
 
   public DungeonStartConfig getDungeonStartConfig() {
     return this.dungeonStartConfig;
   }
 
-  private DungeonClosingConfig dungeonClosingConfig = new DungeonClosingConfig();
+  private final DungeonClosingConfig dungeonClosingConfig = new DungeonClosingConfig();
 
   public DungeonClosingConfig getDungeonClosingConfig() {
     return this.dungeonClosingConfig;
   }
 
-  private BossSpawnConfig bossSpawnConfig = new BossSpawnConfig();
+  private final BossSpawnConfig bossSpawnConfig = new BossSpawnConfig();
 
   public BossSpawnConfig getBossSpawnConfig() {
     return bossSpawnConfig;
   }
 
-  private BossSlainConfig bossSlainConfig = new BossSlainConfig();
+  private final BossSlainConfig bossSlainConfig = new BossSlainConfig();
 
   public BossSlainConfig getBossSlainConfig() {
     return bossSlainConfig;
